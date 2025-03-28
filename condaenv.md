@@ -12,8 +12,11 @@ Thank you to @chunerguo https://github.com/chunerguo/resources/blob/main/scg_con
 
 ## Install other packages, for example:
 `pip install infercnvpy` # just did this for the jpa_infercnv environment. Including these other examples for reference only.
-`conda install -c conda-forge scanpy python-igraph leidenalg`
-`conda install scvi-tools -c conda-forge`
+`conda install -c conda-forge scanpy python-igraph leidenalg` # gave an error
+`pip install -i https://test.pypi.org/simple/ "scikit-misc==0.2.0rc1"` # did not work
+`pip install --user scikit-misc`
+
+https://github.com/scverse/scanpy/issues/2073
 
 ## Check GPU info
 `nvidia-smi`
