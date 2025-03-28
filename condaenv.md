@@ -11,15 +11,15 @@ Thank you to Chuner Guo: https://github.com/chunerguo/resources/blob/main/scg_co
 `conda install ipykernel`
 
 ## Install other packages, for example:
-`conda install -c conda-forge scanpy python-igraph leidenalg`
-`pip install -U scvi-tools`
+`conda install -c conda-forge scanpy python-igraph leidenalg`\
+`pip install -U scvi-tools`\
 `pip install infercnvpy`
 
 ## Due to a dependency issue with scikit-misc in scanpy
 `pip install scikit-misc`
 
 ### Notes on dependency issue
-https://github.com/scverse/scanpy/issues/2073
+https://github.com/scverse/scanpy/issues/2073\
 https://github.com/scverse/scanpy/issues/3144
 
 ## Register kernel
@@ -29,7 +29,7 @@ https://github.com/scverse/scanpy/issues/3144
 conda deactivate
 
 ## Check GPU info to determine required cuda version for GPU use
-`nvidia-smi`
+`nvidia-smi`\
 `module avail cuda`
 
 # How to completely remove a conda environment
