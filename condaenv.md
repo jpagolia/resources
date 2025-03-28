@@ -1,5 +1,5 @@
-# Creating a custom conda environment for Jupyter notebook in SCG
-Thank you to @chunerguo https://github.com/chunerguo/resources/blob/main/scg_conda_env.md
+# Creating a custom conda environment for Jupyter notebook on SCG
+Thank you to Chuner Guo: https://github.com/chunerguo/resources/blob/main/scg_conda_env.md
 
 ## Create a new conda environment in a non-default directory
 `conda create -p /labs/delitto/james/.envs/jpa_infercnv python=3.12`
@@ -11,21 +11,27 @@ Thank you to @chunerguo https://github.com/chunerguo/resources/blob/main/scg_con
 `conda install ipykernel`
 
 ## Install other packages, for example:
-`pip install infercnvpy` # just did this for the jpa_infercnv environment. Including these other examples for reference only.
-`conda install -c conda-forge scanpy python-igraph leidenalg` # gave an error
-`pip install -i https://test.pypi.org/simple/ "scikit-misc==0.2.0rc1"` # did not work
-`pip install --user scikit-misc`
+`conda install -c conda-forge scanpy python-igraph leidenalg`
+`pip install -U scvi-tools`
+`pip install infercnvpy`
 
+## Due to a dependency issue with scikit-misc in scanpy
+`pip install scikit-misc`
+
+### Notes on dependency issue
 https://github.com/scverse/scanpy/issues/2073
-
-## Check GPU info
-`nvidia-smi`
+https://github.com/scverse/scanpy/issues/3144
 
 ## Register kernel
 `python -m ipykernel install --user --name=jpa_infercnv`
 
+## Deactivate
+conda deactivate
+
+## Check GPU info to determine required cuda version for GPU use
+`nvidia-smi`
+`module avail cuda`
+
 # How to completely remove a conda environment
 `conda remove -p /labs/delitto/james/.envs/jpa_infercnv --all`
-
-
 
