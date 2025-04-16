@@ -1,3 +1,8 @@
+# How to install infercnv as an example of installing R packages in the terminal
+
+# Need to load libgit2 to properly install infercnv dependency gert
+`module load libgit2`
+
 # Installing R packages in the terminal using BiocManager
 `module load R/4.3.3`\
 `R`
