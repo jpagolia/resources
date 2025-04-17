@@ -21,16 +21,17 @@ https://github.com/conda-forge/miniforge/ \
 `bash Miniforge3-$(uname)-$(uname -m).sh` \
 Answer `yes` to 'Do you wish to updated your shell profile to automatically initialize conda?'
 
-## Create a new mamba environment in a non-default directory with the python 3.12 and decoupler dependencies
-`mamba create -p /labs/delitto/james/.envs/decoupler python=3.12 conda-forge::decoupler-py`
+## Create a new mamba environment in a non-default directory with the python 3.12
+`mamba create -p /labs/delitto/james/.envs/decoupler python=3.12`
 
-## Activate the conda environment
+## Activate the mamba environment
 `mamba activate /labs/delitto/james/.envs/decoupler`
 
 ## Install ipykernel
 `mamba install ipykernel`
 
 ## Install other packages if needed:
+`pip install decoupler==1.9.0`
 
 ## Register kernel
 `python -m ipykernel install --user --name=decoupler`
