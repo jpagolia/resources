@@ -31,7 +31,9 @@ Answer `yes` to 'Do you wish to updated your shell profile to automatically init
 `mamba install ipykernel`
 
 ## Install other packages if needed:
-`pip install decoupler==1.9.0`
+Check which pip with `which pip` and make sure it is the pip in your mamba environment. Restart shell if not. \
+`pip install decoupler==1.9.0` \
+`pip install scanpy`
 
 ## Register kernel
 `python -m ipykernel install --user --name=decoupler`
