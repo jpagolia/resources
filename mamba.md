@@ -41,6 +41,7 @@ Check which pip with `which pip` and make sure it is the pip in your mamba envir
 ## Add optional dependencies as needed
 `pip install marsilea` \
 `pip install adjusttext` \
+`pip install pydeseq2` \
 `pip install igraph`
 
 ## Deactivate
