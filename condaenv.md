@@ -35,3 +35,6 @@ conda deactivate
 # How to completely remove a conda environment
 `conda remove -p /labs/delitto/james/.envs/jpa_infercnv --all`
 
+# Other resources
+https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/02-working-with-environments/index.html
+
