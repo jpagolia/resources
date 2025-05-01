@@ -32,8 +32,11 @@ conda deactivate
 `nvidia-smi`\
 `module avail cuda`
 
-# How to completely remove a conda environment
+## How to completely remove a conda environment
 `conda remove -p /labs/delitto/james/.envs/jpa_infercnv --all`
+
+## How to free up space from conda installation into home directory
+`conda clean --all`
 
 # Other resources
 https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/02-working-with-environments/index.html
