@@ -6,5 +6,8 @@
 ## This gives everyone read-only acccess
 `chmod a=r my_directory`
 
+## This gives yourself read, write, and execute access to the directory
+`chmod u+rwx my_directory`
+
 ## Verify the changes
 `ls -l my_directory`
