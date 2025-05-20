@@ -14,7 +14,9 @@ environment.yaml
 `conda activate scimilarity`
 
 ## Install scimilarity
-`pip install scimilarity`
+`git clone https://github.com/genentech/scimilarity.git` \
+`cd scimilarity` \
+`pip install -e .`
 
 ## Register kernel
 `python -m ipykernel install --user --name=scimilarity`
