@@ -10,4 +10,14 @@ environment.yaml
 ## Create a conda environment from a yaml file like this:
 `conda env create -f environment.yaml`
 
-## 
+## Activate the conda environment
+`conda activate scimilarity`
+
+## Install scimilarity
+`pip install scimilarity`
+
+## Register kernel
+`python -m ipykernel install --user --name=scimilarity`
+
+## Deactivate
+`conda deactivate`
