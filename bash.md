@@ -34,10 +34,11 @@
 `:wq` to exit vim
 
 ## Check what files are using a ton of memory - top 20 files or directories
-`du -ah ~ | sort -rh | head -n 20`
+`du -ah ~ | sort -rh | head -n 20` \
+Showing hidden files and directories only: \
+`du -ah ~/. | sort -rh | head -n 20`
 
 ## Get the current path
-`pwd`
-
-## Get the current path without sym links
+`pwd` \
+Get the current path without sym links: \
 `pwd -P`
