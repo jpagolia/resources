@@ -33,3 +33,5 @@
 `Esc` key to stop editing \
 `:wq` to exit vim
 
+## Check what files are using a ton of memory - top 20 files or directories
+`du -ah ~ | sort -rh | head -n 20`
