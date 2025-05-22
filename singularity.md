@@ -1,4 +1,4 @@
-# How to install and run a Docker container using Singularity on SCG
+rm # How to install and run a Docker container using Singularity on SCG
 https://www.sherlock.stanford.edu/docs/software/containers/singularity/#importing-containers \
 Thank you Chuner Guo! https://github.com/chunerguo/resources/blob/main/how_tos/scg_singularity.md
 
