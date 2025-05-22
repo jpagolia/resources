@@ -23,15 +23,22 @@ Change directory to the directory you want to put the image into with `cd <YOUR_
 ## Download the trained models and weights
 `wget https://zenodo.org/records/10685499/files/model_v1.1.tar.gz`
 
-## Run the image and install ipykernel
+## Get a Singularity shell and install ipykernel
 "We require binding /models to your local path storing SCimilarity models, /data to your repository of scRNA-seq data, and /workspace to your notebook path." \
+So I put the model file, new python notebook file, and scimilarity image in the same directory and then go to that directory. Run the following command in that directory.
 ```
-singularity exec --bind /oak/stanford/groups/longaker/ULMS/redo_analysis/code/:/workspace \
-                 --bind /oak/stanford/groups/longaker/ULMS/redo_analysis/objects/:/data \
-                 --bind /oak/stanford/groups/longaker/ULMS/james/scimilarity/:/models \
-                 ./scimilarity_latest.sif start-notebook` \
+singularity shell --bind /oak/stanford/groups/longaker/james/scimilarity:/workspace \
+                 --bind /oak/stanford/groups/longaker/ULMS/redo_analysis/objects:/data \
+                 --bind /oak/stanford/groups/longaker/james/scimilarity:/models \
+                 ./scimilarity_latest.sif
 ```
 `python -m ipykernel install --user --name=scim_env`
 
-##
+## Run the image
+```
+singularity exec --bind /oak/stanford/groups/longaker/james/scimilarity:/workspace \
+                 --bind /oak/stanford/groups/longaker/ULMS/redo_analysis/objects:/data \
+                 --bind /oak/stanford/groups/longaker/james/scimilarity:/models \
+                 ./scimilarity_latest.sif start-notebook
+```
 
