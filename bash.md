@@ -29,6 +29,7 @@
 
 ## Edit a file in vim text editor
 `vim file_name` \
+Use the arrow keys to move around. Mouse will not work. \
 `i` to insert \
 `Esc` key to stop editing \
 `:wq` to exit vim
@@ -42,3 +43,11 @@ Showing hidden files and directories only: \
 `pwd` \
 Get the current path without sym links: \
 `pwd -P`
+
+## Deleting
+Delete a file `rm <filename>` \
+Delete a directory `rm -r <directory>` \
+Delete all files in a directory `rm -rf <directory>`
+
+## Loop through directories in bash
+https://unix.stackexchange.com/questions/86722/how-do-i-loop-through-only-directories-in-bash
