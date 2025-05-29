@@ -1,4 +1,4 @@
-rm # How to install and run a Docker container using Singularity on SCG
+# How to install and run a Docker container using Singularity on SCG
 https://www.sherlock.stanford.edu/docs/software/containers/singularity/#importing-containers \
 Thank you Chuner Guo! https://github.com/chunerguo/resources/blob/main/how_tos/scg_singularity.md
 
@@ -34,10 +34,64 @@ singularity shell --bind /oak/stanford/groups/longaker/james/scimilarity:/worksp
 ```
 `python -m ipykernel install --user --name=scim_env`
 
+## Step 3: modify kernel file
+
+Now navigate to `~/.local/share/jupyter/kernels/scim_env/` and open the `kernel.json` file, which should look like:
+
+```
+{
+ "argv": [
+  "/usr/sbin/python",
+  "-Xfrozen_modules=off",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "scim_env",
+ "language": "python",
+ "metadata": {
+  "debugger": true
+ }
+}
+```
+
+In order for Jupyter to construct the kernel from the container when a notebook is started, you have to edit the `argv` key as follows. \
+Make sure you repeat the bind statements to create the three required bind paths for the scimilarity package.
+
+```js
+{
+ "argv": [
+  "/usr/sbin/python",
+  "exec",
+  "--bind",
+  "/oak/stanford/groups/longaker/james/scimilarity:/workspace",
+  "--bind",
+  "/oak/stanford/groups/longaker/ULMS/analysis_v3/objects:/data",
+  "--bind",
+  "/oak/stanford/groups/longaker/james/scimilarity:/models",
+  "/oak/stanford/groups/longaker/james/scimilarity/scimilarity_latest.sif",
+  "-Xfrozen_modules=off",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "scim_env",
+ "language": "python",
+ "metadata": {
+  "debugger": true
+ }
+}
+```
+
+The `scim_env` kernel should now be available when you start a Jupyter Notebook Server session on [SCG OnDemand](https://ondemand.scg.stanford.edu/).
+
 ## Run the image
+Make sure you are in the directory where the scimilarity image (.sif file) is located.
 ```
 singularity exec --bind /oak/stanford/groups/longaker/james/scimilarity:/workspace \
-                 --bind /oak/stanford/groups/longaker/ULMS/redo_analysis/objects:/data \
+                 --bind /oak/stanford/groups/longaker/ULMS/analysis_v3/objects:/data \
                  --bind /oak/stanford/groups/longaker/james/scimilarity:/models \
                  ./scimilarity_latest.sif start-notebook
 ```
