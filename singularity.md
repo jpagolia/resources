@@ -2,6 +2,9 @@
 https://www.sherlock.stanford.edu/docs/software/containers/singularity/#importing-containers \
 Thank you Chuner Guo! https://github.com/chunerguo/resources/blob/main/how_tos/scg_singularity.md
 
+This is example will show how to use Singularity to work with the Docker container for the python package Scimilarity: \
+https://genentech.github.io/scimilarity/install.html#using-the-scimilarity-docker-container
+
 ## Tmux and request an interactive shell with adequate resources
 `tmux new -s <SESSION_NAME>` \
 `sdev -c 2 -m 64 -t 12:00:00`
