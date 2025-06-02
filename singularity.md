@@ -39,7 +39,7 @@ singularity shell --bind /oak/stanford/groups/longaker/james/scimilarity:/worksp
 
 ## Step 3: modify kernel file
 
-Now navigate to `~/.local/share/jupyter/kernels/scim_env/` and open the `kernel.json` file, which should look like:
+Now navigate to `~/.local/share/jupyter/kernels/scim_env/` and open the `kernel.json` file, which may look something like this:
 
 ```
 {
@@ -65,7 +65,7 @@ Make sure you repeat the bind statements to create the three required bind paths
 ```js
 {
  "argv": [
-  "/usr/sbin/python",
+  "singularity",
   "exec",
   "--bind",
   "/oak/stanford/groups/longaker/james/scimilarity:/workspace",
@@ -91,11 +91,15 @@ Make sure you repeat the bind statements to create the three required bind paths
 The `scim_env` kernel should now be available when you start a Jupyter Notebook Server session on [SCG OnDemand](https://ondemand.scg.stanford.edu/).
 
 ## Run the image
-Make sure you are in the directory where the scimilarity image (.sif file) is located.
+This is an alternative way to start a jupyter notebook. Make sure you are in the directory where the scimilarity image (.sif file) is located. Then you can run this command to start a jupyter notebook.
 ```
 singularity exec --bind /oak/stanford/groups/longaker/james/scimilarity:/workspace \
                  --bind /oak/stanford/groups/longaker/ULMS/analysis_v3/objects:/data \
                  --bind /oak/stanford/groups/longaker/james/scimilarity:/models \
                  ./scimilarity_latest.sif start-notebook
 ```
-
+You will have to ssh into the correct local host and node, for example with this command:
+```
+ssh -L 8888:localhost:8888 jpagolia@smsh11dsu-srcf-d15-37.scg.stanford.edu
+```
+Then put the second URL that singularity spits out into your browser.
