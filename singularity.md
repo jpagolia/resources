@@ -20,8 +20,12 @@ Alternatively, you can put these lines at the end of your .bashrc file, which is
 `echo $SINGULARITY_CACHEDIR`
 
 ## Pull the docker image
-Change directory to the directory you want to put the image into with `cd <YOUR_DIRECTORY>`
-`singularity pull docker://ghcr.io/genentech/scimilarity:latest && singularity cache clean` This will also clean the cache after you are done.
+Change directory to the directory you want to put the image into with 
+```
+cd <YOUR_DIRECTORY>
+singularity pull docker://ghcr.io/genentech/scimilarity:latest && singularity cache clean
+```
+This will also clean the cache after you are done.
 
 ## Download the trained models and weights
 `wget https://zenodo.org/records/10685499/files/model_v1.1.tar.gz`
@@ -75,3 +79,7 @@ Building the SIF image file may take 10 minutes or so. Then, singularity will op
 ssh -L 8888:localhost:8888 <USERNAME>@smsh11dsu-srcf-d15-37.scg.stanford.edu
 ```
 Then put the second URL that singularity spits out into your browser.
+
+## Other tips and tricks
+When your are finished, use the `exit --no-cleanup` option to avoid permissions issues with the SINGULARITY_TMPDIR.
+You can then `chmod -R u+rwx $SINGULARITY_TMPDIR` and `rm -rf` the tmp files, which have the prefix 'rootfs-'
