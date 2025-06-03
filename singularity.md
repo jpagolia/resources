@@ -31,7 +31,7 @@ Change directory to the directory you want to put the image into with `cd <YOUR_
 So I put the model file, new python notebook file, and scimilarity image in the same directory and then go to that directory. Run the following command in that directory.
 ```
 singularity shell --bind /oak/stanford/groups/longaker/james/scimilarity:/workspace \
-                 --bind /oak/stanford/groups/longaker/ULMS/redo_analysis/objects:/data \
+                 --bind /oak/stanford/groups/longaker/ULMS/analysis_v3/objects:/data \
                  --bind /oak/stanford/groups/longaker/james/scimilarity:/models \
                  ./scimilarity_latest.sif
 ```
