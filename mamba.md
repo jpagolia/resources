@@ -6,7 +6,7 @@ https://github.com/chunerguo/resources/blob/main/how_tos/scg_conda_env.md
 For reference:
 https://mamba.readthedocs.io/en/latest/user_guide/mamba.html \
 https://github.com/conda-forge/miniforge \
-https://decoupler-py.readthedocs.io/en/latest/installation.html
+https://decoupler-py.readthedocs.io/en/latest/index.html
 
 ## Install mamba
 ### Check the system architecture
@@ -32,7 +32,7 @@ Answer `yes` to 'Do you wish to updated your shell profile to automatically init
 
 ## Install other packages if needed
 Check which pip with `which pip` and make sure it is the pip in your mamba environment. Restart shell if not. \
-`pip install decoupler==1.9.0` \
+`pip install decoupler==2.0.0` \
 `pip install scanpy`
 
 ## Register kernel
