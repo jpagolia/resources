@@ -83,5 +83,5 @@ ssh -L 8888:localhost:8888 <USERNAME>@smsh11dsu-srcf-d15-37.scg.stanford.edu
 Then put the second URL that singularity spits out into your browser.
 
 ## Other tips and tricks
-When your are finished, use the `exit --no-cleanup` option to avoid permissions issues with the SINGULARITY_TMPDIR.
+You can create the shell with the `--no-cleanup` option to avoid permissions issues with deleting files in the SINGULARITY_TMPDIR.
 You can then `chmod -R u+rwx $SINGULARITY_TMPDIR` and `rm -rf` the tmp files, which have the prefix 'rootfs-'
