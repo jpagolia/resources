@@ -40,7 +40,9 @@ singularity shell --bind /oak/stanford/groups/longaker/james/scimilarity:/worksp
                  ./scimilarity_latest.sif
 ```
 Install ipykernel with this command. This will create a kernel with the name `scim_env`. Customize your name as necessary. This will be included in the path to the `kernel.json` file below.
-`python -m ipykernel install --user --name=scim_env`
+```
+python -m ipykernel install --user --name=scim_env
+```
 
 To check where python is installed in this container, run `whereis python` or `which python` in the singularity shell. Alternatively, `import sys` and then `print(sys.executable)`.
 
