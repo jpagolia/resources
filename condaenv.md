@@ -37,8 +37,8 @@ https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientist
 conda remove -p /path/to/your/env --all
 ```
 
-## Installing a conda environment with dependencies that you want
+## Installing a conda environment from yml file
 https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#
 ```
-conda create -p /path/to/your/env python 3.10 ipykernel ipython ipywidgets leidenalg pip
+conda env create -f environment.yaml -p /path/to/your/env
 ```
