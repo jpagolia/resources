@@ -24,3 +24,10 @@ https://stackoverflow.com/questions/3740152/how-do-i-change-permissions-for-a-fo
 ### This gives everyone read access but only the user read, write, and execute access
 Modifies permissions for all files in that directory with `-R`\
 `chmod -R +r,u=rwx /path/to/my_directory/`
+
+### Miscellaneous codes
+```
+chmod 777 # rwx for everyone
+chmod 644
+chmod 755 
+```
