@@ -51,3 +51,9 @@ Delete all files in a directory `rm -rf <directory>`
 
 ## Loop through directories in bash
 https://unix.stackexchange.com/questions/86722/how-do-i-loop-through-only-directories-in-bash
+
+## Copy all files from a directory (and subdirectories within that directory) with a specific ending to a destination directory
+```
+# copy all .h5 files from one directory to another directory
+find /original/directory -type f -iname "*.h5" -exec cp -t /dst/dir {} +
+```
