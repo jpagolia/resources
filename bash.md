@@ -57,3 +57,9 @@ https://unix.stackexchange.com/questions/86722/how-do-i-loop-through-only-direct
 # copy all .h5 files from one directory to another directory
 find /original/directory -type f -iname "*.h5" -exec cp -t /dst/dir {} +
 ```
+
+## pip
+- Clean cache
+```
+pip cache purge
+```
