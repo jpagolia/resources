@@ -15,7 +15,6 @@
 - You will need to install cuda into your virtual environment or conda environment, or load the cuda module if it is already installed somewhere else.
 - You will also need to proper jax and jaxlib versions, as well as torch.
 - https://login.scg.stanford.edu/tutorials/gpus/
-- 
 
 ## SLURM
 `sbatch file_name.sh` submit a job \
@@ -29,7 +28,7 @@
 `htop` gives you a list of the currently running jobs
 
 ## Check memory efficiency after a job is complete
-`seff <JOBID>
+`seff <JOBID>`
 
 ## Edit a file in vim text editor
 `vim file_name` \
@@ -84,4 +83,7 @@ conda clean --all
 ```
 conda remove <package>
 ```
-- 
+- Remove an entire environment
+```
+conda remove -n <environment_name> --all
+```
