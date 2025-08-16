@@ -11,7 +11,11 @@
 `~akkornel/checkquota` check quota in home directory, scg labs folder, and oak
 
 ## GPUs
-`nvidia-smi` check the GPU specs
+`nvidia-smi` check the GPU specs. This will show the driver that is installed, as well as the cuda version needed.
+- You will need to install cuda into your virtual environment or conda environment, or load the cuda module if it is already installed somewhere else.
+- You will also need to proper jax and jaxlib versions, as well as torch.
+- https://login.scg.stanford.edu/tutorials/gpus/
+- 
 
 ## SLURM
 `sbatch file_name.sh` submit a job \
@@ -58,8 +62,26 @@ https://unix.stackexchange.com/questions/86722/how-do-i-loop-through-only-direct
 find /original/directory -type f -iname "*.h5" -exec cp -t /dst/dir {} +
 ```
 
+## Chaining commands together
+```
+Use ; to run commands sequentially regardless of success or failure.
+Use && to run the second command only if the first command succeeds.
+Use || to run the second command only if the first command fails.
+```
+
 ## pip
 - Clean cache
 ```
 pip cache purge
 ```
+
+## conda
+- Clean cache
+```
+conda clean --all
+```
+- Remove package
+```
+conda remove <package>
+```
+- 
