@@ -11,7 +11,7 @@
 `~akkornel/checkquota` check quota in home directory, scg labs folder, and oak
 
 ## GPUs
-`nvidia-smi` check the GPU specs. This will show the driver that is installed, as well as the cuda version needed.
+`nvidia-smi` check the GPU specs. This will show the driver that is installed, as well as the cuda version needed. This must be done after sshing into the node that actually has the GPU attached to it, not the login node (which has a small GPU).
 - You will need to install cuda into your virtual environment or conda environment, or load the cuda module if it is already installed somewhere else.
 - You will also need to proper jax and jaxlib versions, as well as torch.
 - https://login.scg.stanford.edu/tutorials/gpus/
