@@ -9,8 +9,8 @@
 `checkquota` \
 `get_compute_charges -a account -u user` display your charges for the month for a given account \
 `~akkornel/checkquota` check storage limit in home directory, scg labs folder, and oak \
-`lfs quota -p 11432 /oak/stanford/ -h` show inodes (files) limit as well
-
+`lfs quota -p 11432 /oak/stanford/ -h` show inodes (files) limit as well \
+`du -sh *` check disk usage of all subdirectories and files in directory
 
 ## GPUs
 `nvidia-smi` check the GPU specs. This will show the driver that is installed, as well as the cuda version needed. This must be done after sshing into the node that actually has the GPU attached to it, not the login node (which has a small GPU).
