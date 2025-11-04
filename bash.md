@@ -75,6 +75,14 @@ Use || to run the second command only if the first command fails.
 ```
 pip cache purge
 ```
+- If issues building wheels, make sure GCC (GNU compiler) is loaded.
+```
+module load gcc
+```
+- Sometimes a recent PyPI release will break the pip wheel. If so, go back to the previous version x.x.x.
+```
+pip install PACKAGE_NAME==x.x.x
+```
 
 ## conda
 - Clean cache
