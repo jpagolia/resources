@@ -71,7 +71,7 @@ Use || to run the second command only if the first command fails.
 ```
 
 ## pip
-- Clean cache
+- Clean cache: Make sure you are cleaning the right pip. So if you used pip to install within a conda environment, activate the conda environment first and then clean the cache with this command:
 ```
 pip cache purge
 ```
@@ -83,6 +83,11 @@ module load gcc
 ```
 pip install PACKAGE_NAME==x.x.x
 ```
+- If building from source, you can also try to load cmake:
+```
+module load cmake
+```
+- For pyarrow, it's better to install with conda.
 
 ## conda
 - Clean cache
