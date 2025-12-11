@@ -3,8 +3,9 @@ https://gps.uml.edu/tutorials/unix-linux/unix/chmod.htm#:~:text=This%20command%2
 
 ## USE THIS: This applies to all files and subfolders in a directory and gives user rwx access and everyone else read only access
 https://stackoverflow.com/questions/3740152/how-do-i-change-permissions-for-a-folder-and-its-subfolders-files \
-`find /path/to/my_directory -type d -exec chmod 755 {} \;`\
-`find /path/to/my_directory -type f -exec chmod 644 {} \;`
+`find /path/to/my_directory -type d -exec chmod 755 {} \;` \
+`find /path/to/my_directory -type f -exec chmod 644 {} \;` \
+`find path/to/my_directory -type f -exec chmod 444 {} \; # read-only for everyone`
 
 ## Verify the changes
 `ls -l my_directory`\
@@ -27,7 +28,8 @@ Modifies permissions for all files in that directory with `-R`\
 
 ### Miscellaneous codes
 ```
-chmod 777 # rwx for everyone
-chmod 644
-chmod 755 
+chmod 777 # rwx for everyone \
+chmod 644 \
+chmod 755 \
+chmod 444 # read-only for everyone
 ```
