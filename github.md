@@ -85,4 +85,36 @@
     ```
     git push origin main
     ```
-     
+# How to update your local repository with changes (commits) that have taken place on the remote repository
+1. Check for ssh access issues
+   ```
+   # Make sure you can see the id_ed25519 and id_ed25519.pub public-private key pairing that you previously created
+   ls -l ~/.ssh
+   # If it's there but you are still having access issues, check if you need to add the key to the ssh agent.
+   eval "$(ssh-agent -s)"
+   # output should say Agent pid #####
+   ssh-add -l
+   # If output says "The agent has no identities, you need to add the key.
+   ssh-add ~/.ssh/id_ed25519
+   # Enter your passphrase when prompted.
+   ```
+2. SSH into github
+   ```
+   ssh -T git@github.com
+   # Hi USERNAME! You've successfully authenticated, but GitHub does not provide shell access.
+   # If issues you can get a verbose output
+   ssh -Tvv git@github.com
+   ```
+3. Change directory to your local repository and check the remote location
+   ```
+   cd /path/to/your/repository
+   git remote -v
+   ```
+3. Pull from your github repository, assuming the only changes are on the remote repository
+   ```
+   git fetch origin
+   # Check which branch you are on
+   git branch -vv
+   # This will pull changes from the remote repo, assuming that your local commit is an ancestor of the remote repo. No merge commits will be allowed.
+   git pull --ff-only
+   
