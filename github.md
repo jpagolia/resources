@@ -92,9 +92,9 @@
    ls -l ~/.ssh
    # If it's there but you are still having access issues, check if you need to add the key to the ssh agent.
    eval "$(ssh-agent -s)"
-   # output should say Agent pid #####
+   # output should say "Agent pid #####"
    ssh-add -l
-   # If output says "The agent has no identities, you need to add the key.
+   # If output says "The agent has no identities," you need to add the key.
    ssh-add ~/.ssh/id_ed25519
    # Enter your passphrase when prompted.
    ```
