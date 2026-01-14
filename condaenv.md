@@ -42,3 +42,9 @@ https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environme
 ```
 conda env create -f environment.yaml -p /path/to/your/env
 ```
+## These packages are easier to install with conda first:
+  - pyarrow
+  - h5py
+  - imagecodecs
+  - pyproj
+In general, you should install as many packages/dependencies as you can through conda first, and then use pip to install anything unavailable through conda. This way, pip will use the conda-installed dependencies already in your environment. But conda will not use dependencies installed through pip, so installing through pip first and then adding stuff with conda will not work.
