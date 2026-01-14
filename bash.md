@@ -87,7 +87,10 @@ pip install PACKAGE_NAME==x.x.x
 ```
 module load cmake
 ```
-- For pyarrow, it's better to install with conda.
+- These packages are easier to install with conda first:
+  - pyarrow
+  - h5py
+  - imagecodecs
 
 ## conda
 - Clean cache
