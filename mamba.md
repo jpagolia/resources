@@ -1,5 +1,7 @@
 # Creating a custom mamba environment for Jupyter notebook on SCG
 
+Mamba is a drop-in replacement for conda. It's much faster than conda.
+
 Thank you to Chuner Guo! \
 https://github.com/chunerguo/resources/blob/main/how_tos/scg_conda_env.md
 
