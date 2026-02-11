@@ -60,6 +60,7 @@
      ```
      git clone git@github.com:ORGANIZATION/REPOSITORY.git
      ```
+     Note: to clone a particular branch of a repository, use the `--branch <BRANCHNAME>` flag.
 8. Add the new notebook to the repository
     - change directory to the repository that you just cloned
      ```
