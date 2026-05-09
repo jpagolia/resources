@@ -71,6 +71,7 @@ Use || to run the second command only if the first command fails.
 ```
 
 ## pip
+- Dry run installation (don't break anything) `pip install <PACKAGE_NAME> --dry-run
 - Clean cache: Make sure you are cleaning the right pip. So if you used pip to install within a conda environment, activate the conda environment first and then clean the cache with this command:
 ```
 pip cache purge
